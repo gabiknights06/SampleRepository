@@ -66,7 +66,7 @@
             // tx_CountryCode
             // 
             this.tx_CountryCode.Location = new System.Drawing.Point(180, 23);
-            this.tx_CountryCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_CountryCode.Margin = new System.Windows.Forms.Padding(2);
             this.tx_CountryCode.Name = "tx_CountryCode";
             this.tx_CountryCode.Size = new System.Drawing.Size(53, 20);
             this.tx_CountryCode.TabIndex = 1;
@@ -74,7 +74,7 @@
             // tx_Name
             // 
             this.tx_Name.Location = new System.Drawing.Point(180, 51);
-            this.tx_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_Name.Margin = new System.Windows.Forms.Padding(2);
             this.tx_Name.Name = "tx_Name";
             this.tx_Name.Size = new System.Drawing.Size(138, 20);
             this.tx_Name.TabIndex = 3;
@@ -92,7 +92,7 @@
             // tx_District
             // 
             this.tx_District.Location = new System.Drawing.Point(180, 79);
-            this.tx_District.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_District.Margin = new System.Windows.Forms.Padding(2);
             this.tx_District.Name = "tx_District";
             this.tx_District.Size = new System.Drawing.Size(138, 20);
             this.tx_District.TabIndex = 5;
@@ -110,7 +110,7 @@
             // tx_Population
             // 
             this.tx_Population.Location = new System.Drawing.Point(180, 106);
-            this.tx_Population.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_Population.Margin = new System.Windows.Forms.Padding(2);
             this.tx_Population.Name = "tx_Population";
             this.tx_Population.Size = new System.Drawing.Size(138, 20);
             this.tx_Population.TabIndex = 7;
@@ -134,7 +134,7 @@
             this.panel1.Controls.Add(this.tx_JsonUrl);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(8, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 228);
             this.panel1.TabIndex = 8;
@@ -142,7 +142,7 @@
             // btn_clear
             // 
             this.btn_clear.Location = new System.Drawing.Point(324, 179);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(70, 37);
             this.btn_clear.TabIndex = 4;
@@ -152,7 +152,7 @@
             // btn_genList
             // 
             this.btn_genList.Location = new System.Drawing.Point(89, 179);
-            this.btn_genList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_genList.Margin = new System.Windows.Forms.Padding(2);
             this.btn_genList.Name = "btn_genList";
             this.btn_genList.Size = new System.Drawing.Size(117, 37);
             this.btn_genList.TabIndex = 4;
@@ -163,7 +163,7 @@
             // btn_generate
             // 
             this.btn_generate.Location = new System.Drawing.Point(15, 179);
-            this.btn_generate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_generate.Margin = new System.Windows.Forms.Padding(2);
             this.btn_generate.Name = "btn_generate";
             this.btn_generate.Size = new System.Drawing.Size(70, 37);
             this.btn_generate.TabIndex = 4;
@@ -174,7 +174,7 @@
             // tx_JsonUrl
             // 
             this.tx_JsonUrl.Location = new System.Drawing.Point(15, 27);
-            this.tx_JsonUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_JsonUrl.Margin = new System.Windows.Forms.Padding(2);
             this.tx_JsonUrl.Multiline = true;
             this.tx_JsonUrl.Name = "tx_JsonUrl";
             this.tx_JsonUrl.Size = new System.Drawing.Size(381, 150);
@@ -201,7 +201,7 @@
             this.panel2.Controls.Add(this.tx_District);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(8, 239);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(412, 159);
             this.panel2.TabIndex = 9;
@@ -217,7 +217,7 @@
             this.lv_list.FullRowSelect = true;
             this.lv_list.GridLines = true;
             this.lv_list.Location = new System.Drawing.Point(424, 8);
-            this.lv_list.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lv_list.Margin = new System.Windows.Forms.Padding(2);
             this.lv_list.Name = "lv_list";
             this.lv_list.Size = new System.Drawing.Size(562, 391);
             this.lv_list.TabIndex = 10;
@@ -232,22 +232,22 @@
             // ch_Name
             // 
             this.ch_Name.Text = "Name";
-            this.ch_Name.Width = 250;
+            this.ch_Name.Width = 201;
             // 
             // ch_CountryCode
             // 
             this.ch_CountryCode.Text = "Country Code";
-            this.ch_CountryCode.Width = 150;
+            this.ch_CountryCode.Width = 87;
             // 
             // ch_District
             // 
             this.ch_District.Text = "District";
-            this.ch_District.Width = 202;
+            this.ch_District.Width = 140;
             // 
             // ch_Population
             // 
             this.ch_Population.Text = "Population";
-            this.ch_Population.Width = 201;
+            this.ch_Population.Width = 126;
             // 
             // Form1
             // 
@@ -257,7 +257,7 @@
             this.Controls.Add(this.lv_list);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
