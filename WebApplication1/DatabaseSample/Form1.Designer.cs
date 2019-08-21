@@ -49,14 +49,19 @@
             this.ch_CountryCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_District = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Population = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Put = new System.Windows.Forms.Button();
+            this.btn_Post = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 25);
+            this.label1.Location = new System.Drawing.Point(13, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
@@ -65,7 +70,7 @@
             // 
             // tx_CountryCode
             // 
-            this.tx_CountryCode.Location = new System.Drawing.Point(180, 23);
+            this.tx_CountryCode.Location = new System.Drawing.Point(88, 19);
             this.tx_CountryCode.Margin = new System.Windows.Forms.Padding(2);
             this.tx_CountryCode.Name = "tx_CountryCode";
             this.tx_CountryCode.Size = new System.Drawing.Size(53, 20);
@@ -73,7 +78,7 @@
             // 
             // tx_Name
             // 
-            this.tx_Name.Location = new System.Drawing.Point(180, 51);
+            this.tx_Name.Location = new System.Drawing.Point(88, 47);
             this.tx_Name.Margin = new System.Windows.Forms.Padding(2);
             this.tx_Name.Name = "tx_Name";
             this.tx_Name.Size = new System.Drawing.Size(138, 20);
@@ -82,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 53);
+            this.label2.Location = new System.Drawing.Point(13, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -91,7 +96,7 @@
             // 
             // tx_District
             // 
-            this.tx_District.Location = new System.Drawing.Point(180, 79);
+            this.tx_District.Location = new System.Drawing.Point(88, 75);
             this.tx_District.Margin = new System.Windows.Forms.Padding(2);
             this.tx_District.Name = "tx_District";
             this.tx_District.Size = new System.Drawing.Size(138, 20);
@@ -100,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 81);
+            this.label3.Location = new System.Drawing.Point(13, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
@@ -109,7 +114,7 @@
             // 
             // tx_Population
             // 
-            this.tx_Population.Location = new System.Drawing.Point(180, 106);
+            this.tx_Population.Location = new System.Drawing.Point(88, 102);
             this.tx_Population.Margin = new System.Windows.Forms.Padding(2);
             this.tx_Population.Name = "tx_Population";
             this.tx_Population.Size = new System.Drawing.Size(138, 20);
@@ -118,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(105, 110);
+            this.label4.Location = new System.Drawing.Point(13, 106);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
@@ -141,7 +146,7 @@
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(324, 179);
+            this.btn_clear.Location = new System.Drawing.Point(326, 181);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(70, 37);
@@ -192,6 +197,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.tx_CountryCode);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.tx_Population);
@@ -203,7 +209,7 @@
             this.panel2.Location = new System.Drawing.Point(8, 239);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(412, 159);
+            this.panel2.Size = new System.Drawing.Size(246, 159);
             this.panel2.TabIndex = 9;
             // 
             // lv_list
@@ -216,13 +222,14 @@
             this.ch_Population});
             this.lv_list.FullRowSelect = true;
             this.lv_list.GridLines = true;
-            this.lv_list.Location = new System.Drawing.Point(424, 8);
+            this.lv_list.Location = new System.Drawing.Point(425, 8);
             this.lv_list.Margin = new System.Windows.Forms.Padding(2);
             this.lv_list.Name = "lv_list";
             this.lv_list.Size = new System.Drawing.Size(562, 391);
             this.lv_list.TabIndex = 10;
             this.lv_list.UseCompatibleStateImageBehavior = false;
             this.lv_list.View = System.Windows.Forms.View.Details;
+            this.lv_list.SelectedIndexChanged += new System.EventHandler(this.Lv_list_SelectedIndexChanged);
             // 
             // ch_id
             // 
@@ -249,12 +256,57 @@
             this.ch_Population.Text = "Population";
             this.ch_Population.Width = 126;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btn_Delete);
+            this.panel3.Controls.Add(this.btn_Put);
+            this.panel3.Controls.Add(this.btn_Post);
+            this.panel3.Location = new System.Drawing.Point(259, 239);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(162, 159);
+            this.panel3.TabIndex = 11;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(15, 106);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(130, 37);
+            this.btn_Delete.TabIndex = 5;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.Btn_Delete_Click);
+            // 
+            // btn_Put
+            // 
+            this.btn_Put.Location = new System.Drawing.Point(15, 58);
+            this.btn_Put.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Put.Name = "btn_Put";
+            this.btn_Put.Size = new System.Drawing.Size(130, 37);
+            this.btn_Put.TabIndex = 5;
+            this.btn_Put.Text = "Put";
+            this.btn_Put.UseVisualStyleBackColor = true;
+            this.btn_Put.Click += new System.EventHandler(this.Btn_Put_Click);
+            // 
+            // btn_Post
+            // 
+            this.btn_Post.Location = new System.Drawing.Point(15, 10);
+            this.btn_Post.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Post.Name = "btn_Post";
+            this.btn_Post.Size = new System.Drawing.Size(130, 37);
+            this.btn_Post.TabIndex = 5;
+            this.btn_Post.Text = "Post";
+            this.btn_Post.UseVisualStyleBackColor = true;
+            this.btn_Post.Click += new System.EventHandler(this.Btn_Post_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 406);
             this.Controls.Add(this.lv_list);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -265,6 +317,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,6 +345,10 @@
         private System.Windows.Forms.ColumnHeader ch_District;
         private System.Windows.Forms.ColumnHeader ch_Population;
         private System.Windows.Forms.Button btn_genList;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Put;
+        private System.Windows.Forms.Button btn_Post;
     }
 }
 

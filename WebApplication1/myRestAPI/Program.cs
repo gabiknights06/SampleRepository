@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SampleAPIConsumer
+namespace myRestAPI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace SampleAPIConsumer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SampleAPIConsumer());
+            Application.Run(new Form1());
         }
     }
 }
