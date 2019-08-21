@@ -13,6 +13,5 @@ namespace LibraryServices.Data.Models
         public int Publication_Year { get; set; }
         public bool isAvailable { get; set; }
 
-
     }
 }

@@ -11,7 +11,7 @@ namespace SampleAPIConsumer
     public class APICaller
     {
         string BaseURL;
-
+        
         public APICaller()
         {
             BaseURL = "https://jsonplaceholder.typicode.com";
@@ -21,6 +21,8 @@ namespace SampleAPIConsumer
         {
             var client = new RestClient(BaseURL);
 
+            //$ is used to enable the "{}" as concatation tool
+            //@ is use so the when we enter inside a string we dont need to use "+"
             var request = new RestRequest($@"{BaseURL}/todos");
 
             var response = client.Execute(request);

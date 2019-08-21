@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SampleAPIConsumer
 {
-    public partial class Form1 : Form
+    public partial class SampleAPIConsumer : Form
     {
-        public Form1()
+        public SampleAPIConsumer()
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
@@ -40,19 +40,18 @@ namespace SampleAPIConsumer
                     dataGridView1.Rows[row].Cells["completed"].Value = d.completed;
                     dataGridView1.Rows[row].Tag = d;
                 }
-            }            
+            }
         }
 
         void DisplayValue(Post data)
         {
-                    dataGridView1.Rows.Clear();
-                    int row = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[row].Cells["id"].Value = data.id;
-                    dataGridView1.Rows[row].Cells["userId"].Value = data.userId;
-                    dataGridView1.Rows[row].Cells["title"].Value = data.title;
-                    dataGridView1.Rows[row].Cells["completed"].Value = data.completed;
-                    dataGridView1.Rows[row].Tag = data;
-              
+            dataGridView1.Rows.Clear();
+            int row = dataGridView1.Rows.Add();
+            dataGridView1.Rows[row].Cells["id"].Value = data.id;
+            dataGridView1.Rows[row].Cells["userId"].Value = data.userId;
+            dataGridView1.Rows[row].Cells["title"].Value = data.title;
+            dataGridView1.Rows[row].Cells["completed"].Value = data.completed;
+            dataGridView1.Rows[row].Tag = data;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +86,11 @@ namespace SampleAPIConsumer
             {
                 MessageBox.Show("Please select a record in view.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
